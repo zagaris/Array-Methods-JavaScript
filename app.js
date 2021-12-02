@@ -38,14 +38,6 @@ Array.prototype.customFilter = function (callback) {
     return results;
 }
 
-
-let numbers = [1,2,3,4,5];
-
-console.log(numbers.customFilter((elem) => {
-    return elem % 2 === 0;
-}));
-
-
 /* Custom reduce */
 
 Array.prototype.customReduce = function (callback, initialValue) {
