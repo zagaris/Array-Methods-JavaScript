@@ -7,7 +7,7 @@ describe("Test customIndexOf", () => {
   });
 });
 
-describe("Test customlastIndexOf", () => {
+describe("Test customLastIndexOf", () => {
   test("it should output the last index of the element in the array", () => {
       const output = [1, 5, 3, 5, 5];
       expect(output.customLastIndexOf(5)).toEqual(4);
