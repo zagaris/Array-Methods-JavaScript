@@ -8,6 +8,32 @@ Array.prototype.customIndexOf = function (value) {
     return -1;
 }
 
+/* Custom lastIndexOf() */
+
+Array.prototype.customLastIndexOf = function (value) {
+    for (let i = this.length - 1; i >= 0; i--) {
+        if (this[i] == value)
+            return i;        
+    }
+    return -1;
+}
+
+/* Custom reverse() */
+
+Array.prototype.customReverse = function () {
+    let left = 0;
+    let right = this.length - 1;
+
+    while(left < right) {
+        let temp = this[left];
+        this[left] = this[right];
+        this[right] = temp;
+        left++;
+        right--;
+    }
+    return this;
+}
+
 /* Custom forEach */
 
 Array.prototype.customForEach = function (callback) {
@@ -15,7 +41,6 @@ Array.prototype.customForEach = function (callback) {
         callback(this[i], i, this);
     }
 }
-
 
 /* Custom map */
 
@@ -26,6 +51,7 @@ Array.prototype.customMap = function map(callback) {
     }
     return results;
 }
+
 
 /* Custom filter */
 
